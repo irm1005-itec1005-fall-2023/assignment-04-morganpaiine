@@ -11,30 +11,73 @@
 
 // Constants
 const appID = "app";
-const headingText = "To do. To done. ✅";
 
 // DOM Elements
 let appContainer = document.getElementById(appID);
 
 //
 // Functions
-//
 
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
+function addTask() {
+  const input = document.getElementById("todo-input");
+  const inputValue = input.value;
+
+ 
+  if (!inputValue) {
+    console.error("Error: No input value");
     return;
   }
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
+
+  const listItem = document.createElement("li");
+  listItem.innerText = inputValue;
+
+
+  listItem.addEventListener("click", () =>{
+    listItem.classList.toggle("completed");
+  });
+
+  // remove item when double clicked
+listItem.addEventListener("dblclick", () =>{
+  listItem.remove();
+});
+
+  const list = document.getElementById("todo-list");
+  list.appendChild(listItem);
+
+  // Clear the input
+  input.value = "";
+}
+function removeCompletedTasks() {
+  const completedTasks = document.querySelectorAll(".completed");
+  completedTasks.forEach((task) => {
+    task.remove();
+  });
+}
+
+
+
+//
+
+
+
+// Add a heading to the app container
+function inititialise() {
+  let appContainer = document.getElementById(appID);
+
+  // If anything is wrong with the app container then end
+  if (!appContainer) {
+    console.error("Error: Could not find app contianer" + appID);
+    return;
+  }
+
+
 
   // Init complete
   console.log("App successfully initialised");
+
+
+
 }
 
 //

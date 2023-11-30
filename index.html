@@ -41,11 +41,20 @@
   -->
 
   <main>
-    <div id="app"></div>
+    <div id="app">
+      <h1>To-Do List!</h1>
+      <input type="text" id="todo-input" placeholder="Add a new to-do" />
+      <ul id="todo-list"></ul>
+      <button onclick="addTask()">Add Task</button>
+      <button onclick="removeCompletedTasks()">Remove Completed</button>
+    </div>
   </main>
+
+ 
 
   <!-- Add JavaScript File -->
   <script src="./script.js"></script>
+
 
 </body>
 </html>
