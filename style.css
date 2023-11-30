@@ -42,6 +42,12 @@ main {
 
 }
 
+h1 {
+  text-align: center;
+  color: #457b9d;
+}
+
+
 .todo-container {
   width: 70%;
   margin: 50px auto;
@@ -49,10 +55,39 @@ main {
   padding: 20px;
 }
 
-.button {
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
   padding: 8px 14px;
   margin-top: 10px;
+  border: none;
   cursor: pointer;
+  background-color: #457b9d;
+  color: #fff;
+  border-radius: 30px;
+}
+
+button:hover {
+  background-color: #1d3557;
 }
 
 .completed {
