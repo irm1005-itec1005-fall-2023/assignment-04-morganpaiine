@@ -35,7 +35,6 @@ body {
 
 main {
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,10 +69,12 @@ ul {
 
 li {
   padding: 10px;
+  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 button {
