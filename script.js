@@ -37,6 +37,11 @@ function addTask() {
     listItem.classList.toggle("completed");
   });
 
+  // remove item when double clicked
+listItem.addEventListener("dblclick", () =>{
+  listItem.remove();
+});
+
   const list = document.getElementById("todo-list");
   list.appendChild(listItem);
 
