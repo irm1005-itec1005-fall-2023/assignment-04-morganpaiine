@@ -12,6 +12,9 @@
 // Constants
 const appID = "app";
 const headingText = "To do. To done. ✅";
+const listItem = document.createElement("li");
+listItem.innerText = inputValue;
+const list = document.getElementById("todo-list");
 
 // DOM Elements
 let appContainer = document.getElementById(appID);
@@ -21,7 +24,7 @@ let appContainer = document.getElementById(appID);
 
 function addTask() {
   // Get the input value
-  const input = document.getElementById("new-task");
+  const input = document.getElementById("todo-input");
   const inputValue = input.value;
 
   // If the input value is empty then end
