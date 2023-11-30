@@ -39,8 +39,26 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
+.todo-container {
+  width: 70%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.button {
+  padding: 8px 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
 
 /****** Screen reader text utility clsas *******/
 .sr-only {
