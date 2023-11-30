@@ -11,10 +11,6 @@
 
 // Constants
 const appID = "app";
-const headingText = "To do. To done. ✅";
-const listItem = document.createElement("li");
-listItem.innerText = inputValue;
-const list = document.getElementById("todo-list");
 
 // DOM Elements
 let appContainer = document.getElementById(appID);
@@ -29,12 +25,14 @@ function addTask() {
 
   // If the input value is empty then end
   if (!inputValue) {
+    console.error("Error: No input value");
     return;
   }
 
   // Create a new list item
   const listItem = document.createElement("li");
   listItem.innerText = inputValue;
+
 
   // Add the list item to the list
   const list = document.getElementById("todo-list");
@@ -47,19 +45,20 @@ function addTask() {
 
 // Add a heading to the app container
 function inititialise() {
+  let appContainer = document.getElementById(appID);
   // If anything is wrong with the app container then end
   if (!appContainer) {
-    console.error("Error: Could not find app contianer");
+    console.error("Error: Could not find app contianer" + appID);
     return;
   }
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
+
 
   // Init complete
   console.log("App successfully initialised");
+
+
+
 }
 
 //
